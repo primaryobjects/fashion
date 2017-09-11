@@ -60,6 +60,21 @@ loadImage <- function(filename) {
   list(bytes=result, nrow=nrow(data), ncol=ncol(data))
 }
 
+# Helper for running a trained model against actual 28x28 PNG images.
+runTest <- function(filename, model) {
+  # Load the png.
+  png <- loadImage(filename)
+  
+  # Plot the image.
+  show_digit(png$bytes)
+  
+  # Convert the bytes to a format for our model.
+  pngData <- data.frame(x = matrix(png$bytes, 1, 784))
+  
+  # Predict the result.
+  predict(model, pngData)
+}
+
 # Load data.
 load_mnist()
 
@@ -98,24 +113,10 @@ length(which(predict(fit, dataTrain) == dataTrain$y)) / nrow(dataTrain)
 length(which(predict(fit, dataTest) == dataTest$y)) / nrow(dataTest)
 
 # Try on our own data (28x28 PNG)!
-runTest <- function(filename) {
-  # Load the png.
-  test1 <- loadImage(filename)
-  
-  # Plot the image.
-  show_digit(test1$bytes)
-  
-  # Convert the bytes to a format for our model.
-  test1Data <- data.frame(x = matrix(test1$bytes, 1, 784))
-  
-  # Predict the result.
-  predict(fit, test1Data)
-}
-
-runTest('data/test/shirt1-28x28.png')
-runTest('data/test/shirt2-28x28.png')
-runTest('data/test/shirt3-28x28.png')
-runTest('data/test/pants1-28x28.png')
-runTest('data/test/pants2-28x28.png')
-runTest('data/test/sneaker1-28x28.png')
-runTest('data/test/sneaker2-28x28.png')
+runTest('data/test/shirt1-28x28.png', fit)
+runTest('data/test/shirt2-28x28.png', fit)
+runTest('data/test/shirt3-28x28.png', fit)
+runTest('data/test/pants1-28x28.png', fit)
+runTest('data/test/pants2-28x28.png', fit)
+runTest('data/test/sneaker1-28x28.png', fit)
+runTest('data/test/sneaker2-28x28.png', fit)
