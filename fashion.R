@@ -7,6 +7,7 @@
 # brendan o'connor - gist.github.com/39760 - anyall.org
 
 library(caret)
+library(png)
 
 load_mnist <- function() {
   load_image_file <- function(filename) {
@@ -109,6 +110,7 @@ max(table(dataTest$y)) / nrow(dataTest)
 # svmRadial: .902 / .785
 # rf: 
 # lda: 
+# multinom (MaxNWts = 30000): (10000) .870 / .720
 length(which(predict(fit, dataTrain) == dataTrain$y)) / nrow(dataTrain)
 length(which(predict(fit, dataTest) == dataTest$y)) / nrow(dataTest)
 
