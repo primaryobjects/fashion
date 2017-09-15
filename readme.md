@@ -51,7 +51,7 @@ You can [load](https://gist.github.com/primaryobjects/06c2deca989af9c1acf735521b
 
 ## Accuracy
 
-The trained models have achieved the following accuracies (train/test) as shown below. A detailed list of accuracies is also [available](https://github.com/zalandoresearch/fashion-mnist#benchmark).
+The trained models have achieved the following accuracies (train/test) on 30k images as shown below. A detailed list of accuracies is also [available](https://github.com/zalandoresearch/fashion-mnist#benchmark).
 
 #### Baseline Algorithm (always predicts the most frequently occurring clothing item)
 12%/10%
