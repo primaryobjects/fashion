@@ -106,11 +106,11 @@ max(table(dataTest$y)) / nrow(dataTest)
 
 # Model accuracy.
 # LogitBoost: (1000) .952 / .682, (10000) .813 / .748
-# gbm: (10000) .940 / .844
+# gbm: (10000) .940 / .844, (30000) .901 / .853
+# multinom: (10000) .870 / .720, (30000) .835 / .783 (MaxNWts = 10000)
 # svmRadial: .902 / .785
 # rf: 
 # lda: 
-# multinom (MaxNWts = 30000): (10000) .870 / .720
 length(which(predict(fit, dataTrain) == dataTrain$y)) / nrow(dataTrain)
 length(which(predict(fit, dataTest) == dataTest$y)) / nrow(dataTest)
 
