@@ -108,7 +108,7 @@ max(table(dataTest$y)) / nrow(dataTest)
 # LogitBoost: (1000) .952 / .682, (10000) .813 / .748
 # gbm: (10000) .940 / .844, (30000) .901 / .853
 # multinom: (10000) .870 / .720, (30000) .835 / .783 (MaxNWts = 10000)
-# svmRadial: .902 / .785
+# svmRadial: (10000) .902 / .785, (30000) .912 / .872
 # rf: 
 # lda: 
 length(which(predict(fit, dataTrain) == dataTrain$y)) / nrow(dataTrain)
