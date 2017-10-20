@@ -56,8 +56,8 @@ The trained models have achieved the following accuracies (train/test) on 30k im
 #### Baseline Algorithm (always predicts the most frequently occurring clothing item)
 12%/10%
 
-#### LogitBoost
-81%/75%
+#### Support Vector Machine (svmRadial)
+91%/87%
 
 #### Gradient Boosting Machine (gbm)
 90%/85%
@@ -65,8 +65,8 @@ The trained models have achieved the following accuracies (train/test) on 30k im
 #### Neural Network (multinom)
 84%/78%
 
-#### Support Vector Machine (svmRadial)
-91%/87%
+#### LogitBoost
+81%/75%
 
 ## References
 
