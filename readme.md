@@ -66,7 +66,7 @@ The trained models have achieved the following accuracies (train/test) on 30k im
 84%/78%
 
 #### Support Vector Machine (svmRadial)
-90%/79%
+91%/87%
 
 ## References
 
