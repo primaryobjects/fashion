@@ -3,6 +3,8 @@ Fashion
 
 Training AI machine learning models on the Fashion MNIST [dataset](https://github.com/zalandoresearch/fashion-mnist).
 
+Read the full article at [Image Recognition for Fashion with Machine Learning](http://www.primaryobjects.com/2017/10/23/image-recognition-for-fashion-with-machine-learning/)
+
 ![](/data/test/pants1-28x28.png)
 ![](/data/test/pants2-28x28.png)
 ![](/data/test/shirt1-28x28.png)
