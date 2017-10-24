@@ -47,6 +47,10 @@ Each training and test example is assigned to one of the following labels:
 | 8 | Bag |
 | 9 | Ankle boot |
 
+## Pre-trained Models
+
+You can find a set of [pre-trained models](https://github.com/primaryobjects/fashion/tree/master/data/models) included in this repository for immediate loading into the R environment.
+
 ## Loading Your Own Images
 
 You can [load](https://gist.github.com/primaryobjects/06c2deca989af9c1acf735521ba9db81#file-readpng2-r) your own (color) images of shirts, pants, or shoes by reading any 28x28 image, converting to grayscale, and extracting the single channel of bytes from grayscale. Once loaded, you can classify the result using a trained machine learning model, based on the fashion-mnist dataset.
